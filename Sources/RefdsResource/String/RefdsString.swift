@@ -26,12 +26,14 @@ public extension RefdsString {
         case title
         case description
         case buttonTitle
+        case requestAuthReason
         
         public var key: String {
             switch self {
             case .title: return "lockScreen.title"
             case .description: return "lockScreen.description"
             case .buttonTitle: return "lockScreen.buttonTitle"
+            case .requestAuthReason: return "lockScreen.requestAuthReason"
             }
         }
         
