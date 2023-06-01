@@ -27,6 +27,7 @@ public extension RefdsString {
         case description
         case buttonTitle
         case requestAuthReason
+        case alertAuthError
         
         public var key: String {
             switch self {
@@ -34,6 +35,7 @@ public extension RefdsString {
             case .description: return "lockScreen.description"
             case .buttonTitle: return "lockScreen.buttonTitle"
             case .requestAuthReason: return "lockScreen.requestAuthReason"
+            case .alertAuthError: return "lockScreen.alertAuthError"
             }
         }
         
