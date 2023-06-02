@@ -51,6 +51,7 @@ public extension RefdsString {
 public extension RefdsString {
     enum Storage: String, RefdsStringProtocol {
         case auth = "refds.storage.allow.auth"
+        case customAppIcon = "refds.storage.customAppIcon"
         
         public var key: String { "" }
     }
