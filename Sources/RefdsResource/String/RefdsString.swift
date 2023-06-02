@@ -7,11 +7,13 @@ public protocol RefdsStringProtocol {
 
 public enum RefdsString: RefdsStringProtocol {
     case lockScreen(LockScreen)
+    case storage(Storage)
     
     public var key: String { "" }
     public var rawValue: String {
         switch self {
         case .lockScreen(let lockScreen): return lockScreen.rawValue
+        case .storage(let storage): return storage.rawValue
         }
     }
 }
@@ -42,5 +44,14 @@ public extension RefdsString {
         public var rawValue: String {
             NSLocalizedString(key, tableName: "Localizable", bundle: .module, comment: "")
         }
+    }
+}
+
+// MARK: - Storage
+public extension RefdsString {
+    enum Storage: String, RefdsStringProtocol {
+        case auth = "refds.storage.allow.auth"
+        
+        public var key: String { "" }
     }
 }
